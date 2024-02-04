@@ -1,0 +1,42 @@
+# Ignore build artifacts
+build/
+bin/
+wasm/
+
+# Ignore CMake generated files
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+CMakeTmp/
+cmake_install.cmake
+Makefile
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore executables
+*.exe
+*.out
+
+# Ignore generated wasm files
+*.wasm
+*.wasm.map
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.user.*
+*.suo
+*.sdf
+*.opensdf
+*.sln.docstates
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
