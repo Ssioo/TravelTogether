@@ -21,7 +21,7 @@ set(CMAKE_TOOLCHAIN_FILE ${EMSDK}/upstream/emscripten/cmake/Modules/Platform/Ems
 
 # Add your source files here
 add_executable(TravelTogether
-    main.cpp
+    src/main.cpp
 )
 
 # Set the target properties for the WASM build
