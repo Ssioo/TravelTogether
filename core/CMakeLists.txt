@@ -10,6 +10,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/wasm)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/wasm)
 
 # Build variant Debug Cflags
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -sUSE_SDL=2")
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 
@@ -23,9 +24,3 @@ set(CMAKE_TOOLCHAIN_FILE ${EMSDK}/upstream/emscripten/cmake/Modules/Platform/Ems
 add_executable(TravelTogether
     src/main.cpp
 )
-
-# Set the target properties for the WASM build
-# set_target_properties(TravelTogether PROPERTIES
-#     SUFFIX ".wasm"
-#     LINK_FLAGS "--no-entry --export-all"
-# )
