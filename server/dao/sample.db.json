@@ -1,0 +1,20 @@
+{
+    "rooms": [
+        {
+            "id": 1,
+            "name": "Sample Project",
+            "description": "This is a sample project room",
+            "objects": [
+                {
+                    "id": 1,
+                    "name": "circle",
+                    "type": "circle",
+                    "x": 0.1,
+                    "y": 0.1,
+                    "radius": 0.1,
+                    "color": "#ff0000"
+                }
+            ]
+        }
+    ]
+}

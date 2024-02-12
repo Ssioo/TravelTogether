@@ -1,6 +1,6 @@
 import express, { Express, Request, Response, Application } from 'express';
 import dotenv from 'dotenv';
-const wss = require('./socket.ts')
+import { initWss } from './socket';
 
 //For env File 
 dotenv.config();
@@ -19,13 +19,9 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Welcome to Express & TypeScript Server');
 });
 
-// Websocket endpoint
-app.get('/ws/connect', (req: Request, res: Response) => {
-    
-});
-
-const server = app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Server is Fire at http://localhost:${port}`);
 });
 
-wss(server);
+// Start websocket server
+initWss(+(process.env.WS_PORT ?? 9000));
